@@ -1,0 +1,8 @@
+stage_id,stage_name,stage_order,stage_weight_pct,is_active,description
+1,Lead,1,0,1,Initial contact identified
+2,Qualified Lead,2,0,1,Lead qualification confirmed
+3,Opportunity,3,0,1,Opportunity created in CRM
+4,Demo,4,25,1,Product demonstration scheduled
+5,Proposal,5,50,1,Formal proposal sent to customer
+6,Negotiation,6,75,1,Commercial terms being negotiated
+7,Close,7,100,0,Opportunity closed (won or lost)

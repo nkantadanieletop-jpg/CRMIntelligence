@@ -1,0 +1,7 @@
+[build]
+  publish = "dashboard"
+
+[[headers]]
+  for = "/data/*.csv"
+  [headers.values]
+    Content-Type = "text/csv; charset=utf-8"

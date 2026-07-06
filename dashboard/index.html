@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DataStream Analytics &mdash; Revenue Operations Dashboard</title>
+<meta name="description" content="Executive revenue operations dashboard for DataStream Analytics: pipeline, funnel, win rate, and rep performance, computed live from CRM opportunity data.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark">DS</span>
+      <div class="brand-text">
+        <span class="brand-name">DataStream Analytics</span>
+        <span class="brand-sub">Revenue Operations Command Center</span>
+      </div>
+    </div>
+    <div class="topbar-meta">
+      <div class="meta-item">
+        <span class="meta-label">Data window</span>
+        <span class="meta-value" id="dataWindow">&mdash;</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Records</span>
+        <span class="meta-value" id="recordCount">&mdash;</span>
+      </div>
+      <div class="live-pill"><span class="live-dot"></span>Live from CSV</div>
+    </div>
+  </div>
+</header>
+
+<main id="app" class="app-shell" aria-busy="true">
+
+  <div id="loadingState" class="loading-state">
+    <div class="loading-spinner" aria-hidden="true"></div>
+    <p>Loading opportunity ledger&hellip;</p>
+  </div>
+
+  <div id="errorState" class="error-state" hidden>
+    <p class="error-title">Couldn't load the data.</p>
+    <p class="error-detail" id="errorDetail">Check that data/opportunities.csv is reachable from this page.</p>
+  </div>
+
+  <div id="dashboardContent" class="dashboard-content" hidden>
+
+    <!-- ============ FILTER BAR ============ -->
+    <section class="filter-bar" aria-label="Global filters">
+      <div class="filter-group">
+        <label for="filterRegion">Region</label>
+        <select id="filterRegion"><option value="">All regions</option></select>
+      </div>
+      <div class="filter-group">
+        <label for="filterIndustry">Industry</label>
+        <select id="filterIndustry"><option value="">All industries</option></select>
+      </div>
+      <div class="filter-group">
+        <label for="filterSource">Lead source</label>
+        <select id="filterSource"><option value="">All sources</option></select>
+      </div>
+      <div class="filter-group">
+        <label for="filterRep">Sales rep</label>
+        <select id="filterRep"><option value="">All reps</option></select>
+      </div>
+      <button id="resetFilters" class="btn-ghost" type="button">Reset filters</button>
+      <span class="filter-status" id="filterStatus"></span>
+    </section>
+
+    <!-- ============ KPI ROW ============ -->
+    <section class="kpi-grid" aria-label="Executive KPIs" id="kpiGrid">
+      <!-- injected -->
+    </section>
+
+    <!-- ============ INSIGHTS ============ -->
+    <section class="panel insights-panel" aria-label="Executive insights">
+      <div class="panel-head">
+        <h2>Executive insights</h2>
+        <span class="panel-tag">Auto-generated from current filter</span>
+      </div>
+      <ul id="insightsList" class="insights-list"></ul>
+    </section>
+
+    <!-- ============ FUNNEL + STAGE REVENUE ============ -->
+    <section class="grid-2">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>Pipeline funnel</h2>
+          <span class="panel-tag">Opportunity count by stage</span>
+        </div>
+        <div class="chart-wrap chart-tall"><canvas id="funnelChart"></canvas></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">
+          <h2>Revenue by stage</h2>
+          <span class="panel-tag">Open + closed value</span>
+        </div>
+        <div class="chart-wrap chart-tall"><canvas id="stageRevenueChart"></canvas></div>
+      </div>
+    </section>
+
+    <!-- ============ INDUSTRY / REGION ============ -->
+    <section class="grid-2">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>Revenue by industry</h2>
+          <span class="panel-tag">Closed-won, current filter</span>
+        </div>
+        <div class="chart-wrap"><canvas id="industryChart"></canvas></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">
+          <h2>Revenue by region</h2>
+          <span class="panel-tag">Closed-won, current filter</span>
+        </div>
+        <div class="chart-wrap"><canvas id="regionChart"></canvas></div>
+      </div>
+    </section>
+
+    <!-- ============ LEAD SOURCE / LEADERBOARD ============ -->
+    <section class="grid-2">
+      <div class="panel">
+        <div class="panel-head">
+          <h2>Revenue by lead source</h2>
+          <span class="panel-tag">Closed-won &amp; win rate by channel</span>
+        </div>
+        <div class="chart-wrap"><canvas id="sourceChart"></canvas></div>
+      </div>
+      <div class="panel">
+        <div class="panel-head">
+          <h2>Sales rep leaderboard</h2>
+          <span class="panel-tag">Ranked by closed-won revenue</span>
+        </div>
+        <div class="table-wrap" id="leaderboardWrap">
+          <table class="data-table" id="leaderboardTable">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Rep</th>
+                <th>Segment</th>
+                <th class="num">Won revenue</th>
+                <th class="num">Deals won</th>
+                <th class="num">Win rate</th>
+                <th class="num">Revenue share*</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboardBody"></tbody>
+          </table>
+          <p class="table-footnote">*Share of total closed-won revenue among reps shown in the current filter.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OPPORTUNITY EXPLORER ============ -->
+    <section class="panel explorer-panel" aria-label="Opportunity explorer">
+      <div class="panel-head">
+        <h2>Opportunity explorer</h2>
+        <span class="panel-tag" id="explorerCount">&mdash;</span>
+      </div>
+
+      <div class="explorer-controls">
+        <div class="search-field">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5.25" stroke="currentColor" stroke-width="1.5"/><path d="M11 11L14.5 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <input type="search" id="explorerSearch" placeholder="Search by opportunity ID, account, rep, industry, region&hellip;" aria-label="Search opportunities">
+        </div>
+
+        <select id="explorerStageFilter">
+          <option value="">All stages</option>
+        </select>
+
+        <select id="explorerOutcomeFilter">
+          <option value="">All outcomes</option>
+          <option value="won">Won</option>
+          <option value="lost">Lost</option>
+          <option value="open">Open</option>
+        </select>
+
+        <select id="explorerSort">
+          <option value="value_desc">Value: high to low</option>
+          <option value="value_asc">Value: low to high</option>
+          <option value="date_desc">Created: newest</option>
+          <option value="date_asc">Created: oldest</option>
+          <option value="cycle_desc">Sales cycle: longest</option>
+          <option value="cycle_asc">Sales cycle: shortest</option>
+        </select>
+      </div>
+
+      <div class="table-wrap explorer-table-wrap">
+        <table class="data-table" id="explorerTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Account</th>
+              <th>Rep</th>
+              <th>Stage</th>
+              <th>Industry</th>
+              <th>Region</th>
+              <th>Source</th>
+              <th class="num">Value</th>
+              <th>Outcome</th>
+              <th>Created</th>
+              <th class="num">Cycle (days)</th>
+            </tr>
+          </thead>
+          <tbody id="explorerBody"></tbody>
+        </table>
+      </div>
+
+      <div class="explorer-footer">
+        <button id="explorerPrev" class="btn-ghost" type="button">Previous</button>
+        <span id="explorerPageInfo">&mdash;</span>
+        <button id="explorerNext" class="btn-ghost" type="button">Next</button>
+      </div>
+    </section>
+
+    <footer class="dash-footer">
+      <p>Computed client-side from <code>data/opportunities.csv</code> and related dimension tables. No server, no synthetic figures &mdash; every number on this page recalculates from the current filter selection.</p>
+    </footer>
+
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<script src="csv.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

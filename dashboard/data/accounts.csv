@@ -1,0 +1,321 @@
+account_id,company_name,company_size,industry_id,region_id,customer_lifetime_value,existing_customer_flag,net_revenue_retention_pct,annual_spend,created_date
+1,Acme Manufacturing Co.,Large,1,1,420000,1,92,125000,2018-03-15
+2,Bell Financial Group,Large,2,1,580000,1,78,165000,2018-06-20
+3,Tech Innovations Inc.,Medium,3,1,285000,1,88,95000,2018-09-10
+4,Premier Healthcare Solutions,Large,4,1,450000,1,85,140000,2018-12-05
+5,RetailCorp USA,Medium,5,2,195000,1,82,65000,2019-02-14
+6,Energy Global Ltd.,Large,6,2,510000,1,80,155000,2019-05-20
+7,TeleCom Networks,Large,7,2,620000,1,76,185000,2019-08-10
+8,University of Knowledge,Medium,8,3,225000,1,84,75000,2019-11-15
+9,Manufacturing Excellence,Large,1,1,395000,1,91,120000,2020-01-22
+10,Capital Ventures Bank,Large,2,1,560000,1,79,168000,2020-04-10
+11,SoftWare Solutions Ltd.,Medium,3,1,310000,1,89,105000,2020-06-18
+12,Health Systems International,Large,4,2,475000,1,86,145000,2020-09-05
+13,Retail Dynamics Corp.,Medium,5,2,210000,1,83,70000,2020-11-20
+14,Energy Production Inc.,Large,6,3,525000,1,81,160000,2021-01-30
+15,Global Telecom Services,Large,7,3,640000,1,77,192000,2021-03-15
+16,Education Plus University,Medium,8,3,240000,1,85,80000,2021-05-22
+17,Industrial Systems Group,Large,1,1,410000,1,93,125000,2021-07-10
+18,Financial Systems Corp.,Large,2,2,575000,1,78,172000,2021-09-05
+19,Tech Enterprises Ltd.,Medium,3,2,305000,1,90,105000,2021-11-12
+20,Premier Health Network,Large,4,3,490000,1,87,150000,2022-01-08
+21,RetailHub Solutions,Medium,5,3,220000,1,84,75000,2022-03-15
+22,Energy Worldwide,Large,6,1,530000,1,82,162000,2022-05-20
+23,TeleCommunications Inc.,Large,7,1,650000,1,76,195000,2022-07-18
+24,Advanced Education Systems,Medium,8,1,250000,1,86,85000,2022-09-10
+25,Manufacturing Dynamics,Large,1,2,425000,1,94,130000,2022-11-05
+26,Metro Bank Holdings,Large,2,2,590000,1,79,175000,2023-01-12
+27,Digital Tech Solutions,Medium,3,3,320000,1,91,110000,2023-03-08
+28,Integrated Healthcare,Large,4,3,505000,1,88,155000,2023-05-15
+29,Global Retail Network,Medium,5,3,235000,1,85,80000,2023-07-22
+30,Power Generation Corp.,Large,6,2,545000,1,83,165000,2023-09-10
+31,Telecom Global Services,Large,7,2,665000,1,77,200000,2023-11-20
+32,State University System,Medium,8,2,265000,1,87,90000,2024-01-15
+33,Smith Manufacturing,Large,1,1,388000,1,91,118000,2018-04-10
+34,Johnson Financial Services,Large,2,1,562000,1,78,168000,2018-07-25
+35,Williams Technology,Medium,3,1,298000,1,89,100000,2018-10-15
+36,Davis Healthcare,Large,4,1,468000,1,86,142000,2019-01-20
+37,Miller Retail Group,Medium,5,2,205000,1,83,68000,2019-03-18
+38,Wilson Energy,Large,6,2,518000,1,81,158000,2019-06-12
+39,Moore Telecom,Large,7,2,632000,1,77,190000,2019-09-22
+40,Taylor Education,Medium,8,3,232000,1,85,78000,2019-12-10
+41,Anderson Manufacturing,Large,1,1,402000,1,92,122000,2020-02-15
+42,Thomas Financial,Large,2,1,568000,1,79,170000,2020-05-20
+43,Jackson Technology,Medium,3,1,315000,1,90,107000,2020-07-28
+44,White Healthcare,Large,4,2,478000,1,87,148000,2020-10-05
+45,Harris Retail,Medium,5,2,215000,1,84,72000,2020-12-18
+46,Martin Energy,Large,6,3,532000,1,82,162000,2021-02-22
+47,Thompson Telecom,Large,7,3,642000,1,78,194000,2021-04-20
+48,Garcia Education,Medium,8,3,245000,1,86,82000,2021-06-15
+49,Martinez Manufacturing,Large,1,1,418000,1,93,128000,2021-08-20
+50,Robinson Financial,Large,2,2,578000,1,80,173000,2021-10-25
+51,Clark Technology,Medium,3,2,310000,1,91,108000,2021-12-12
+52,Rodriguez Healthcare,Large,4,3,495000,1,88,152000,2022-02-10
+53,Lewis Retail,Medium,5,3,225000,1,85,76000,2022-04-18
+54,Lee Energy,Large,6,1,538000,1,83,165000,2022-06-22
+55,Walker Telecom,Large,7,1,652000,1,79,197000,2022-08-30
+56,Hall Education,Medium,8,1,255000,1,87,86000,2022-10-15
+57,Allen Manufacturing,Large,1,2,430000,1,94,132000,2022-12-20
+58,Young Financial,Large,2,2,585000,1,81,176000,2023-02-14
+59,King Technology,Medium,3,3,325000,1,92,112000,2023-04-12
+60,Wright Healthcare,Large,4,3,510000,1,89,158000,2023-06-20
+61,Lopez Retail,Medium,5,3,240000,1,86,82000,2023-08-28
+62,Hill Energy,Large,6,2,545000,1,84,168000,2023-10-25
+63,Scott Telecom,Large,7,2,662000,1,80,199000,2023-12-10
+64,Green Education,Medium,8,2,270000,1,88,92000,2024-02-05
+65,Adams Manufacturing,Large,1,1,395000,0,91,120000,2020-03-10
+66,Nelson Financial,Large,2,1,570000,0,78,170000,2020-06-15
+67,Carter Technology,Medium,3,1,305000,0,90,105000,2020-08-22
+68,Mitchell Healthcare,Large,4,1,480000,0,87,145000,2020-11-12
+69,Perez Retail,Medium,5,2,220000,0,84,75000,2021-01-25
+70,Roberts Energy,Large,6,2,525000,0,82,160000,2021-03-30
+71,Phillips Telecom,Large,7,2,645000,0,78,194000,2021-05-28
+72,Campbell Education,Medium,8,3,250000,0,86,85000,2021-07-20
+73,Parker Manufacturing,Large,1,1,408000,0,92,124000,2021-09-15
+74,Evans Financial,Large,2,1,575000,0,79,172000,2021-11-22
+75,Edwards Technology,Medium,3,1,320000,0,91,110000,2022-01-20
+76,Collins Healthcare,Large,4,2,490000,0,88,150000,2022-03-25
+77,Reeves Retail,Medium,5,2,230000,0,85,78000,2022-05-18
+78,Morris Energy,Large,6,3,535000,0,83,163000,2022-07-22
+79,Rogers Telecom,Large,7,3,655000,0,79,198000,2022-09-20
+80,Rogers Education,Medium,8,3,260000,0,87,88000,2022-11-15
+81,Morgan Manufacturing,Large,1,1,420000,0,93,128000,2022-12-10
+82,Peterson Financial,Large,2,2,582000,0,80,175000,2023-02-08
+83,Cooper Technology,Medium,3,2,325000,0,92,112000,2023-04-15
+84,Tucker Healthcare,Large,4,3,500000,0,89,155000,2023-06-22
+85,Peterson Retail,Medium,5,3,240000,0,86,82000,2023-08-30
+86,Gray Energy,Large,6,1,542000,0,84,166000,2023-10-28
+87,Ramirez Telecom,Large,7,1,662000,0,80,200000,2023-12-15
+88,James Education,Medium,8,1,268000,0,88,91000,2024-02-10
+89,Watson Manufacturing,Large,1,2,435000,0,94,133000,2024-03-05
+90,Brooks Financial,Large,2,2,590000,0,81,178000,2024-04-12
+91,Chavez Technology,Medium,3,3,330000,0,93,115000,2024-05-20
+92,Kelly Healthcare,Large,4,3,515000,0,90,160000,2024-06-25
+93,Sanders Retail,Medium,5,3,245000,0,87,84000,2024-07-30
+94,Bennett Energy,Large,6,2,550000,0,85,170000,2024-08-15
+95,Wood Telecom,Large,7,2,670000,0,81,205000,2024-09-10
+96,Barnes Education,Medium,8,2,275000,0,89,95000,2024-10-05
+97,Ross Manufacturing,Large,1,1,398000,0,91,121000,2019-05-20
+98,Henderson Financial,Large,2,1,572000,0,79,171000,2019-08-15
+99,Coleman Technology,Medium,3,1,308000,0,90,106000,2019-11-10
+100,Jenkins Healthcare,Large,4,1,485000,0,87,147000,2020-02-05
+101,Perry Retail,Medium,5,2,225000,0,84,76000,2020-04-20
+102,Powell Energy,Large,6,2,530000,0,82,161000,2020-06-18
+103,Long Telecom,Large,7,2,650000,0,78,195000,2020-09-12
+104,Patterson Education,Medium,8,3,255000,0,86,86000,2020-11-25
+105,Hughes Manufacturing,Large,1,1,412000,0,92,125000,2020-01-15
+106,Flores Financial,Large,2,1,577000,0,79,173000,2020-03-22
+107,Washington Technology,Medium,3,1,318000,0,91,111000,2020-05-30
+108,Butler Healthcare,Large,4,2,492000,0,88,151000,2020-08-10
+109,Simmons Retail,Medium,5,2,235000,0,85,79000,2020-10-18
+110,Bryant Energy,Large,6,3,537000,0,83,164000,2020-12-20
+111,Alexander Telecom,Large,7,3,658000,0,79,199000,2021-02-15
+112,Russell Education,Medium,8,3,262000,0,87,89000,2021-04-22
+113,Griffin Manufacturing,Large,1,1,425000,0,93,130000,2021-06-10
+114,Hayes Financial,Large,2,2,587000,0,80,176000,2021-08-18
+115,Myers Technology,Medium,3,2,328000,0,92,113000,2021-10-25
+116,Ford Healthcare,Large,4,3,507000,0,89,157000,2021-12-12
+117,Hamilton Retail,Medium,5,3,245000,0,86,83000,2022-02-08
+118,Graham Energy,Large,6,1,545000,0,84,167000,2022-04-15
+119,Sullivan Telecom,Large,7,1,665000,0,80,202000,2022-06-20
+120,Wallace Education,Medium,8,1,270000,0,88,92000,2022-08-25
+121,Woods Manufacturing,Large,1,2,438000,0,94,134000,2022-10-15
+122,Cole Financial,Large,2,2,595000,0,81,179000,2022-12-10
+123,West Technology,Medium,3,3,333000,0,93,116000,2023-01-25
+124,Jordan Healthcare,Large,4,3,520000,0,90,162000,2023-03-15
+125,Owens Retail,Medium,5,3,250000,0,87,85000,2023-05-20
+126,Reynolds Energy,Large,6,2,552000,0,85,171000,2023-07-10
+127,Fisher Telecom,Large,7,2,672000,0,81,206000,2023-09-15
+128,Ellis Education,Medium,8,2,277000,0,89,96000,2023-11-10
+129,Harper Manufacturing,Large,1,1,442000,0,95,138000,2024-01-05
+130,Mason Financial,Large,2,1,598000,0,82,180000,2024-02-20
+131,Williamson Technology,Medium,3,1,336000,0,94,117000,2024-03-30
+132,Medina Healthcare,Large,4,1,523000,0,91,165000,2024-05-10
+133,Fowler Retail,Medium,5,2,253000,0,88,86000,2024-06-15
+134,Brewer Energy,Large,6,2,555000,0,86,172000,2024-07-20
+135,Hoffman Telecom,Large,7,2,675000,0,82,208000,2024-08-25
+136,Carlson Education,Medium,8,3,280000,0,90,97000,2024-09-30
+137,Silva Manufacturing,Large,1,1,402000,0,91,122000,2018-05-10
+138,Pearson Financial,Large,2,1,575000,0,79,172000,2018-08-20
+139,Newman Technology,Medium,3,1,310000,0,90,107000,2018-11-12
+140,Bowman Healthcare,Large,4,1,488000,0,87,148000,2019-02-10
+141,Rios Retail,Medium,5,2,228000,0,84,77000,2019-04-18
+142,Kidd Energy,Large,6,2,533000,0,82,162000,2019-07-15
+143,Benson Telecom,Large,7,2,653000,0,78,196000,2019-10-10
+144,Salazar Education,Medium,8,3,258000,0,86,87000,2019-12-20
+145,Winters Manufacturing,Large,1,1,415000,0,92,126000,2020-02-25
+146,Larson Financial,Large,2,1,580000,0,79,174000,2020-05-10
+147,Vargas Technology,Medium,3,1,322000,0,91,112000,2020-07-18
+148,Palmer Healthcare,Large,4,2,495000,0,88,152000,2020-09-22
+149,Garrett Retail,Medium,5,2,238000,0,85,80000,2020-11-28
+150,Mckinney Energy,Large,6,3,540000,0,83,165000,2021-01-20
+151,Mccarty Telecom,Large,7,3,661000,0,79,201000,2021-03-25
+152,Freeman Education,Medium,8,3,265000,0,87,90000,2021-05-15
+153,Shields Manufacturing,Large,1,1,428000,0,93,131000,2021-07-18
+154,Ray Financial,Large,2,2,588000,0,80,177000,2021-09-25
+155,Richmond Technology,Medium,3,2,330000,0,92,114000,2021-11-20
+156,Lawson Healthcare,Large,4,3,510000,0,89,158000,2022-01-15
+157,Sutton Retail,Medium,5,3,248000,0,86,84000,2022-03-20
+158,Mcallister Energy,Large,6,1,548000,0,84,169000,2022-05-18
+159,Delgado Telecom,Large,7,1,668000,0,80,204000,2022-07-22
+160,Desai Education,Medium,8,1,272000,0,88,93000,2022-09-20
+161,Spence Manufacturing,Large,1,2,440000,0,94,135000,2022-11-10
+162,Atkinson Financial,Large,2,2,592000,0,81,178000,2023-01-12
+163,Giles Technology,Medium,3,3,332000,0,93,115000,2023-03-10
+164,Jacobs Healthcare,Large,4,3,518000,0,90,161000,2023-05-15
+165,Maclean Retail,Medium,5,3,252000,0,87,86000,2023-07-20
+166,Riddle Energy,Large,6,2,553000,0,85,172000,2023-09-18
+167,Caldwell Telecom,Large,7,2,673000,0,81,207000,2023-11-15
+168,Rosenberg Education,Medium,8,2,276000,0,89,95000,2024-01-10
+169,Mclaughlin Manufacturing,Large,1,1,445000,0,95,139000,2024-02-15
+170,Olson Financial,Large,2,1,600000,0,82,181000,2024-03-20
+171,Christensen Technology,Medium,3,1,338000,0,94,118000,2024-04-25
+172,Mccarney Healthcare,Large,4,1,525000,0,91,166000,2024-05-30
+173,Mcleod Retail,Medium,5,2,255000,0,88,87000,2024-07-05
+174,Mcnally Energy,Large,6,2,557000,0,86,173000,2024-08-10
+175,Mckinlay Telecom,Large,7,2,677000,0,82,209000,2024-09-15
+176,Mchugh Education,Medium,8,3,282000,0,90,98000,2024-10-20
+177,Mccarroll Manufacturing,Large,1,1,405000,0,91,123000,2018-06-15
+178,Mccarty Financial,Large,2,1,577000,0,79,173000,2018-09-10
+179,Mccann Technology,Medium,3,1,312000,0,90,108000,2018-12-05
+180,Mccallum Healthcare,Large,4,1,490000,0,87,149000,2019-03-10
+181,Mccain Retail,Medium,5,2,230000,0,84,78000,2019-05-18
+182,Mccallister Energy,Large,6,2,535000,0,82,163000,2019-08-12
+183,Mccamish Telecom,Large,7,2,655000,0,78,197000,2019-11-10
+184,Mccammon Education,Medium,8,3,260000,0,86,88000,2020-01-20
+185,Mccallion Manufacturing,Large,1,1,418000,0,92,127000,2020-03-25
+186,Mccalluim Financial,Large,2,1,582000,0,79,175000,2020-06-10
+187,Mccalmont Technology,Medium,3,1,324000,0,91,113000,2020-08-18
+188,Mccalmonds Healthcare,Large,4,2,497000,0,88,153000,2020-10-22
+189,Mccallahan Retail,Medium,5,2,240000,0,85,81000,2020-12-28
+190,Mccafferty Energy,Large,6,3,542000,0,83,166000,2021-02-20
+191,Mccaffrey Telecom,Large,7,3,663000,0,79,202000,2021-04-25
+192,Mccale Education,Medium,8,3,268000,0,87,91000,2021-06-20
+193,Mccallan Manufacturing,Large,1,1,430000,0,93,132000,2021-08-25
+194,Mccafee Financial,Large,2,2,590000,0,80,178000,2021-10-30
+195,Mccameron Technology,Medium,3,2,332000,0,92,115000,2021-12-15
+196,Mccain Healthcare,Large,4,3,512000,0,89,159000,2022-02-10
+197,Mccalland Retail,Medium,5,3,250000,0,86,85000,2022-04-15
+198,Mccalla Energy,Large,6,1,550000,0,84,170000,2022-06-20
+199,Mccallan Telecom,Large,7,1,670000,0,80,205000,2022-08-25
+200,Mccalvey Education,Medium,8,1,275000,0,88,94000,2022-10-30
+201,Manufacturing Precision,Large,1,2,445000,0,94,136000,2022-12-15
+202,Financial Excellence,Large,2,2,597000,0,81,179000,2023-02-10
+203,Technology Plus,Medium,3,3,335000,0,93,116000,2023-04-15
+204,Healthcare Solutions,Large,4,3,522000,0,90,162000,2023-06-20
+205,Retail Strategy,Medium,5,3,252000,0,87,86000,2023-08-25
+206,Energy Systems,Large,6,2,555000,0,85,171000,2023-10-30
+207,Telecom Pro,Large,7,2,675000,0,81,207000,2023-12-20
+208,Education Global,Medium,8,2,280000,0,89,95000,2024-02-15
+209,Manufacturing Pro,Large,1,1,450000,0,95,140000,2024-04-10
+210,Financial Group,Large,2,1,602000,0,82,182000,2024-05-15
+211,Technology World,Medium,3,1,340000,0,94,119000,2024-06-20
+212,Healthcare Pro,Large,4,1,527000,0,91,167000,2024-07-25
+213,Retail Plus,Medium,5,2,257000,0,88,87000,2024-08-30
+214,Energy Group,Large,6,2,560000,0,86,174000,2024-09-15
+215,Telecom Global,Large,7,2,680000,0,82,210000,2024-10-20
+216,Education Pro,Medium,8,3,285000,0,90,99000,2024-11-15
+217,Industrial Works,Large,1,1,410000,0,92,124000,2019-06-20
+218,Finance Hub,Large,2,1,580000,0,79,174000,2019-09-15
+219,Software Leaders,Medium,3,1,315000,0,90,109000,2019-12-10
+220,Medical Works,Large,4,1,492000,0,87,150000,2020-03-10
+221,Shop Right,Medium,5,2,232000,0,84,79000,2020-05-18
+222,Power Works,Large,6,2,537000,0,82,164000,2020-08-12
+223,Connect Global,Large,7,2,657000,0,78,198000,2020-11-10
+224,Learn Today,Medium,8,3,262000,0,86,89000,2021-01-20
+225,Factory Best,Large,1,1,420000,0,92,128000,2021-03-25
+226,Bank Strong,Large,2,1,585000,0,79,176000,2021-06-10
+227,Code Works,Medium,3,1,326000,0,91,114000,2021-08-18
+228,Care Center,Large,4,2,500000,0,88,154000,2021-10-22
+229,Shop World,Medium,5,2,242000,0,85,82000,2021-12-28
+230,Power Global,Large,6,3,545000,0,83,167000,2022-02-20
+231,Link World,Large,7,3,665000,0,79,203000,2022-04-25
+232,Study Hub,Medium,8,3,270000,0,87,92000,2022-06-20
+233,Build Strong,Large,1,1,432000,0,93,133000,2022-08-25
+234,Money Smart,Large,2,2,592000,0,80,179000,2022-10-30
+235,Data Smart,Medium,3,2,334000,0,92,116000,2022-12-15
+236,Health Smart,Large,4,3,515000,0,89,160000,2023-02-10
+237,Deal Hub,Medium,5,3,252000,0,86,85000,2023-04-15
+238,Power Smart,Large,6,1,552000,0,84,171000,2023-06-20
+239,Talk Smart,Large,7,1,672000,0,80,206000,2023-08-25
+240,School Smart,Medium,8,1,278000,0,88,94000,2023-10-30
+241,Factory Giant,Large,1,2,447000,0,94,137000,2023-12-15
+242,Bank Giant,Large,2,2,600000,0,81,180000,2024-02-10
+243,Code Giant,Medium,3,3,337000,0,93,117000,2024-04-15
+244,Care Giant,Large,4,3,525000,0,90,163000,2024-06-20
+245,Shop Giant,Medium,5,3,257000,0,87,87000,2024-08-25
+246,Power Giant,Large,6,2,557000,0,85,172000,2024-10-30
+247,Link Giant,Large,7,2,677000,0,81,208000,2024-12-15
+248,Study Giant,Medium,8,2,283000,0,89,96000,2025-02-10
+249,Build Master,Large,1,1,455000,0,95,142000,2025-04-15
+250,Money Master,Large,2,1,605000,0,82,183000,2025-06-20
+251,Data Master,Medium,3,1,342000,0,94,120000,2025-08-25
+252,Health Master,Large,4,1,530000,0,91,168000,2025-10-30
+253,Deal Master,Medium,5,2,260000,0,88,88000,2025-12-15
+254,Power Master,Large,6,2,562000,0,86,175000,2026-02-10
+255,Talk Master,Large,7,2,685000,0,82,211000,2026-04-15
+256,School Master,Medium,8,3,290000,0,90,100000,2026-06-20
+257,Precision Inc.,Large,1,1,425000,0,93,130000,2019-07-15
+258,Capital Plus,Large,2,1,583000,0,79,175000,2019-10-10
+259,Software Plus,Medium,3,1,318000,0,90,110000,2020-01-05
+260,Medical Plus,Large,4,1,495000,0,87,151000,2020-04-10
+261,Retail Plus Inc.,Medium,5,2,235000,0,84,80000,2020-06-18
+262,Energy Plus,Large,6,2,540000,0,82,165000,2020-09-12
+263,Connect Plus,Large,7,2,660000,0,78,199000,2020-12-10
+264,Learn Plus,Medium,8,3,265000,0,86,90000,2021-02-20
+265,Factory Prime,Large,1,1,423000,0,92,129000,2021-04-25
+266,Bank Prime,Large,2,1,588000,0,79,177000,2021-07-10
+267,Code Prime,Medium,3,1,329000,0,91,115000,2021-09-18
+268,Care Prime,Large,4,2,503000,0,88,155000,2021-11-22
+269,Shop Prime,Medium,5,2,245000,0,85,83000,2022-01-28
+270,Power Prime,Large,6,3,548000,0,83,168000,2022-03-20
+271,Link Prime,Large,7,3,668000,0,79,204000,2022-05-25
+272,Study Prime,Medium,8,3,273000,0,87,93000,2022-07-20
+273,Build Prime,Large,1,1,435000,0,93,134000,2022-09-25
+274,Money Prime,Large,2,2,595000,0,80,180000,2022-11-30
+275,Data Prime,Medium,3,2,337000,0,92,117000,2023-01-15
+276,Health Prime,Large,4,3,518000,0,89,161000,2023-03-10
+277,Deal Prime,Medium,5,3,255000,0,86,86000,2023-05-15
+278,Power Select,Large,6,1,555000,0,84,172000,2023-07-20
+279,Talk Select,Large,7,1,675000,0,80,207000,2023-09-25
+280,School Select,Medium,8,1,281000,0,88,95000,2023-11-30
+281,Factory Elite,Large,1,2,450000,0,94,138000,2024-01-15
+282,Bank Elite,Large,2,2,603000,0,81,181000,2024-03-10
+283,Code Elite,Medium,3,3,340000,0,93,118000,2024-05-15
+284,Care Elite,Large,4,3,528000,0,90,164000,2024-07-20
+285,Shop Elite,Medium,5,3,260000,0,87,88000,2024-09-25
+286,Power Elite,Large,6,2,560000,0,85,173000,2024-11-30
+287,Talk Elite,Large,7,2,680000,0,81,209000,2025-01-15
+288,School Elite,Medium,8,2,286000,0,89,97000,2025-03-10
+289,BuildCorp,Large,1,1,460000,0,95,144000,2025-05-15
+290,MoneyCorp,Large,2,1,608000,0,82,184000,2025-07-20
+291,DataCorp,Medium,3,1,345000,0,94,121000,2025-09-25
+292,HealthCorp,Large,4,1,533000,0,91,169000,2025-11-30
+293,DealCorp,Medium,5,2,263000,0,88,89000,2026-01-15
+294,PowerCorp,Large,6,2,565000,0,86,176000,2026-03-20
+295,TalkCorp,Large,7,2,685000,0,82,212000,2026-05-25
+296,SchoolCorp,Medium,8,3,291000,0,90,101000,2026-07-30
+297,NextGen Manufacturing,Large,1,1,432000,0,92,131000,2018-07-20
+298,NextGen Financial,Large,2,1,585000,0,79,176000,2018-10-15
+299,NextGen Technology,Medium,3,1,320000,0,90,111000,2019-01-10
+300,NextGen Healthcare,Large,4,1,498000,0,87,152000,2019-04-15
+301,NextGen Retail,Medium,5,2,238000,0,84,81000,2019-06-20
+302,NextGen Energy,Large,6,2,543000,0,82,166000,2019-09-15
+303,NextGen Telecom,Large,7,2,663000,0,78,200000,2019-12-10
+304,NextGen Education,Medium,8,3,268000,0,86,91000,2020-02-20
+305,Apex Manufacturing,Large,1,1,427000,0,92,130000,2020-04-25
+306,Apex Financial,Large,2,1,590000,0,79,178000,2020-07-10
+307,Apex Technology,Medium,3,1,332000,0,91,116000,2020-09-18
+308,Apex Healthcare,Large,4,2,508000,0,88,156000,2020-11-22
+309,Apex Retail,Medium,5,2,248000,0,85,84000,2021-01-28
+310,Apex Energy,Large,6,3,552000,0,83,169000,2021-03-20
+311,Apex Telecom,Large,7,3,672000,0,79,205000,2021-05-25
+312,Apex Education,Medium,8,3,277000,0,87,94000,2021-07-20
+313,Summit Manufacturing,Large,1,1,440000,0,93,135000,2021-09-25
+314,Summit Financial,Large,2,2,600000,0,80,181000,2021-11-30
+315,Summit Technology,Medium,3,2,342000,0,92,118000,2022-01-15
+316,Summit Healthcare,Large,4,3,523000,0,89,162000,2022-03-10
+317,Summit Retail,Medium,5,3,258000,0,86,87000,2022-05-15
+318,Summit Energy,Large,6,1,560000,0,84,173000,2022-07-20
+319,Summit Telecom,Large,7,1,680000,0,80,209000,2022-09-25
+320,Summit Education,Medium,8,1,290000,0,89,99000,2022-11-30

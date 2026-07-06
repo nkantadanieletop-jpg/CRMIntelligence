@@ -1,0 +1,9 @@
+industry_id,industry_name,sector,target_market_segment
+1,Manufacturing,Industrial,Enterprise
+2,Financial Services,Finance,Enterprise
+3,Technology,Software,Mid-Market
+4,Healthcare,Services,Enterprise
+5,Retail,Commerce,Mid-Market
+6,Energy,Industrial,Enterprise
+7,Telecommunications,Telecom,Enterprise
+8,Education,Services,Mid-Market

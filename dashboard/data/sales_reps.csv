@@ -1,0 +1,13 @@
+sales_rep_id,rep_name,manager_id,tenure_months,quota_amount,sales_segment,hire_date,region_id
+1,Carol S.,10,48,180000,Enterprise,2020-01-15,1
+2,Ben K.,10,42,175000,Enterprise,2020-07-20,1
+3,Alice M.,10,36,170000,Enterprise,2021-01-10,1
+4,Bob K.,11,60,160000,Mid-Market,2019-04-05,1
+5,David L.,11,54,155000,Mid-Market,2019-10-12,2
+6,Emma R.,11,48,160000,Mid-Market,2020-01-20,2
+7,Frank J.,11,42,150000,Mid-Market,2020-07-15,3
+8,Grace T.,11,36,155000,Mid-Market,2021-01-08,3
+9,Henry M.,11,30,145000,Mid-Market,2021-07-22,4
+10,VP Sales,null,120,800000,Leadership,2015-01-01,1
+11,Sales Manager,10,84,200000,Management,2017-05-10,1
+12,Regional Manager,10,96,220000,Management,2016-03-15,2
