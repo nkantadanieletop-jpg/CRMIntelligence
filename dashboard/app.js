@@ -445,14 +445,14 @@
         datasets: [
           {
             label: "Open value",
-            data: labels.map((l) => openByStage.get(l) || 0),
+            data: state.stageOrder.map((s) => openByStage.get(s.name) || 0)
             backgroundColor: PALETTE.gold,
             borderRadius: 4,
             stack: "rev",
           },
           {
             label: "Closed-won value",
-            data: labels.map((l) => wonByStage.get(l) || 0),
+            data: state.stageOrder.map((s) => wonByStage.get(s.name) || 0)
             backgroundColor: PALETTE.accent2,
             borderRadius: 4,
             stack: "rev",
