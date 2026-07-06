@@ -925,35 +925,69 @@
   // ---------------------------------------------------------------------
 
   async function init() {
-    try {
-      const ds = await loadAll();
+  const loading = $("#loadingState");
+  const dashboard = $("#dashboardContent");
+  const error = $("#errorState");
+  const errorDetail = $("#errorDetail");
 
-      state.stageOrder = ds.stages
-        .slice()
-        .sort((a, b) => num(a.stage_order) - num(b.stage_order))
-        .map((s) => ({ id: s.stage_id, name: s.stage_name, order: num(s.stage_order), weight: num(s.stage_weight_pct) }));
+  let ds;
 
-      state.raw = buildJoinedOpportunities(ds);
-      state.filtered = state.raw;
+  // -----------------------------
+  // PHASE 1: LOAD CSV FILES
+  // -----------------------------
+  try {
+    ds = await loadAll();
+  } catch (err) {
+    console.error("LOAD ERROR:", err);
 
-      populateFilterOptions();
-      wireFilterEvents();
-      wireExplorerEvents();
-      renderHeaderMeta();
-      updateFilterStatus();
-      renderAll();
+    loading.hidden = true;
+    error.hidden = false;
+    errorDetail.textContent =
+      "CSV LOAD ERROR:\n" + (err.stack || err.message || String(err));
 
-      $("#loadingState").hidden = true;
-      $("#dashboardContent").hidden = false;
-      $("#app").setAttribute("aria-busy", "false");
-    } catch (err) {
-      console.error(err);
-      $("#loadingState").hidden = true;
-      $("#errorState").hidden = false;
-      $("#errorDetail").textContent = err && err.message ? err.message : String(err);
-      $("#app").setAttribute("aria-busy", "false");
-    }
+    $("#app").setAttribute("aria-busy", "false");
+    return;
   }
+
+  // -----------------------------
+  // PHASE 2: BUILD + RENDER
+  // -----------------------------
+  try {
+    state.stageOrder = ds.stages
+      .slice()
+      .sort((a, b) => num(a.stage_order) - num(b.stage_order))
+      .map((s) => ({
+        id: s.stage_id,
+        name: s.stage_name,
+        order: num(s.stage_order),
+        weight: num(s.stage_weight_pct),
+      }));
+
+    state.raw = buildJoinedOpportunities(ds);
+    state.filtered = state.raw;
+
+    populateFilterOptions();
+    wireFilterEvents();
+    wireExplorerEvents();
+
+    renderHeaderMeta();
+    updateFilterStatus();
+    renderAll();
+
+    loading.hidden = true;
+    dashboard.hidden = false;
+    $("#app").setAttribute("aria-busy", "false");
+  } catch (err) {
+    console.error("RENDER ERROR:", err);
+
+    loading.hidden = true;
+    error.hidden = false;
+    errorDetail.textContent =
+      "RENDER ERROR:\n" + (err.stack || err.message || String(err));
+
+    $("#app").setAttribute("aria-busy", "false");
+  }
+}
 
   document.addEventListener("DOMContentLoaded", init);
 })();
