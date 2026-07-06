@@ -422,7 +422,19 @@
       if (o.isOpen) openByStage.set(o.stageName, (openByStage.get(o.stageName) || 0) + o.value);
       if (o.isWon) wonByStage.set(o.stageName, (wonByStage.get(o.stageName) || 0) + o.value);
     });
-    const labels = state.stageOrder.map((s) => s.name);
+    const labels = state.stageOrder.map((s) => {
+  const map = {
+    "Lead": "Lead",
+    "Qualified Lead": "Qual.",
+    "Opportunity": "Opp.",
+    "Demo": "Demo",
+    "Proposal": "Prop.",
+    "Negotiation": "Neg.",
+    "Close": "Close"
+  };
+
+  return map[s.name] || s.name;
+});
 
     destroyChart("stageRevenue");
     const ctx = $("#stageRevenueChart");
