@@ -22,7 +22,9 @@
      left edge of each card, echoing a physical ledger / binder tab, tying
      back to the "opportunity ledger" language used across the product.
    ========================================================================= */
-
+[hidden] {
+    display: none !important;
+}
 :root {
   --ink: #101827;
   --slate: #48546b;
